@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <header>
+    <div class="dark-mode-toggle">
+      <label for="dark-mode-switch">Dark Mode:</label>
+      <input type="checkbox" id="dark-mode-switch">
+    </div>    
+  </header>  
+  <body>
+    <audio id="timer-sound" src="countdown.mp3"></audio>
+    <div class="timer-container">
+      
+      <div class="timer" id="timer">
+        <span id="hours">00</span> :
+        <span id="minutes">00</span> :
+        <span id="seconds">00</span>
+      </div>
+      <div class="timer-options">
+        <div class="timer-option">
+          <label for="timer-type"></label>
+          <select id="timer-type">
+            <option value="count-up">Count Up</option>
+            <option value="count-down">Count Down</option>
+          </select>
+        </div>
+        <div class="timer-option">
+          <label for="timer-message"></label>
+          <input type="text" id="timer-message" placeholder="Enter message">
+        </div>
+        <div class="timer-option">
+          <label for="timer-size"></label>
+          <select id="timer-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+        
+        <div class="timer-option">
+          <label for="timer-color"></label>
+          <input type="color" id="timer-color">
+        </div>
+        <div class="timer-option">
+          <label for="countdown-hours">Hours:</label>
+          <input type="number" id="countdown-hours" min="0" max="24" value="0">
+        </div>
+        <div class="timer-option">
+          <label for="countdown-minutes">Minutes:</label>
+          <input type="number" id="countdown-minutes" min="0" max="59" value="0">
+        </div>
+        <div class="timer-option">
+          <label for="countdown-seconds">Seconds:</label>
+          <input type="number" id="countdown-seconds" min="0" max="59" value="0">
+        </div>
+      </div>
+      <div class="timer-controls">
+        <button id="start-timer">Start Timer</button>
+        <button id="pause-timer">Pause Timer</button>
+        <button id="reset-timer">Reset Timer</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
